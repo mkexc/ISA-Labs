@@ -49,7 +49,7 @@ fp=fopen('samples.txt','w');
 fprintf(fp,'%d\n', xq);
 fclose(fp);
 
-fp=fopen('results_m.txt', 'w');
+fp=fopen('resultsm.txt', 'w');
 fprintf(fp, '%d\n', yq);
 fclose(fp);
 
