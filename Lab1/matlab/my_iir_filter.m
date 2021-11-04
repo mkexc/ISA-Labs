@@ -20,7 +20,7 @@ x2=sin(2*pi*f2*tt); % second sinewave
 
 x=(x1+x2)/2; % input signal
 
-[bi, ai, bq, aq]=myiir_design(N, nb) % filter design
+[bi, ai, bq, aq, ci, cq]=myiir_design(N, nb) % filter design
 
 y=filter(bq, aq, x); % apply filter
 
@@ -55,6 +55,7 @@ fclose(fp);
 
 %% THD computation
 fp=fopen('../c_program/results_c.txt', 'r');
+%fp=fopen('../c_program/results_adv_c.txt', 'r');
 yc = fscanf(fp,'%d\n', length(yq));
 fclose(fp);
 
