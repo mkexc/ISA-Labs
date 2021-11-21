@@ -8,11 +8,6 @@
  * Basic solution: 1st order filter IIR with input shifted 
    from 13 to 10 bit.
  * NB = 10 bits allows to mantain the THD = -36 dB.
- 
- * The multiplication outputs are shifted of 12 bit to perform 
-   a truncation from 22 bit to 10 bit. -> to model our choosen architecture.
- * The inputs are shifted immediately of 3 bits (13 to 10).
- * The outputs is restored to 13 bits from 11 bits
 */
 
 const int b0 = 1723>>(13-NB); /// B0
