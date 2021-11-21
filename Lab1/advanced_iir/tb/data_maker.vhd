@@ -63,28 +63,6 @@ begin  -- beh
     end if;
   end process;
 
-
-  -- process(clk,RST_n)
-  --   file fp_in : text open READ_MODE is "./vin.mem";
-  --   variable line_in : line;
-  --   variable x : integer;
-  --   variable temp: std_logic_vector(0 downto 0);
-  -- begin
-  --   if(RST_n='0') then
-  --     VOUT<= '0';
-  --   elsif(rising_edge(clk)) then
-  --     if not endfile(fp_in) then
-  --       readline(fp_in, line_in);
-  --       read(line_in, x);
-  --       temp := std_logic_vector(to_unsigned(x, 1));
-  --       VOUT <= temp(0);
-  --     else
-  --       VOUT <= '0';
-  --     end if;
-  --   end if;
-  -- end process;
-
-
   process (CLK, RST_n)
   begin  -- process
     if RST_n = '0' then                 -- asynchronous reset (active low)
