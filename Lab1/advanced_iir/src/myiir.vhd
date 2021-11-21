@@ -20,7 +20,6 @@ architecture behavior of myiir is
 	signal curr1, curr2, next2, curr7, next7, curr8, next9, curr9, next10, curr10 : std_logic_vector(9 downto 0);
 	signal nextVout,currVout, currVinDelay1, currVinDelay2, currVinDelay3, currVinDelay4 : std_logic; 					-- validation bits 
 	signal mult_b0, mult_b1_a1b0, mult_a1_2, mult_a1b1 : std_logic_vector(21 downto 0); 		-- 22 bit
-	signal add_9_11_in: std_logic_vector(10 downto 0);
 	component adder
 		generic(
 			NBIT : integer := 10
