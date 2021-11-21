@@ -22,7 +22,6 @@ int myfilter(int x, int vin)
 {
   static int sw[NR]; /// w shift register
   static int first_run = 0; /// for cleaning the shift register
-  //static int y; /// output sample
   int i; /// index
   int w; /// intermediate value (w)
   
