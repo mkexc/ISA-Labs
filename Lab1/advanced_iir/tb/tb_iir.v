@@ -1,9 +1,3 @@
-//AAA include a signal END_SIM_i that at '1' stops the clock
-// top-level module must be tb_iir
-// UUT must be myiir
-
-//`timescale 1ns
-
 module tb_iir ();
 
    wire CLK_i;
