@@ -1,0 +1,112 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : myiir
+Version: O-2018.06-SP4
+Date   : Fri Nov 19 22:28:49 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: A1[4] (input port clocked by my_clk)
+  Endpoint: currDout_reg[5]
+            (rising edge-triggered flip-flop clocked by my_clk)
+  Path Group: my_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  myiir              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock my_clk (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  A1[4] (in)                                              0.00       0.50 f
+  M_A1/B[1] (multiplier_2)                                0.00       0.50 f
+  M_A1/mult_14/b[1] (multiplier_2_DW_mult_tc_1)           0.00       0.50 f
+  M_A1/mult_14/U506/Z (BUF_X1)                            0.04       0.54 f
+  M_A1/mult_14/U868/ZN (XNOR2_X1)                         0.06       0.60 f
+  M_A1/mult_14/U838/ZN (OAI22_X1)                         0.06       0.66 r
+  M_A1/mult_14/U800/ZN (NAND2_X1)                         0.04       0.70 f
+  M_A1/mult_14/U799/ZN (INV_X1)                           0.04       0.74 r
+  M_A1/mult_14/U637/ZN (AOI21_X1)                         0.04       0.77 f
+  M_A1/mult_14/U640/ZN (OAI21_X1)                         0.06       0.84 r
+  M_A1/mult_14/U881/ZN (AOI21_X1)                         0.03       0.87 f
+  M_A1/mult_14/U882/ZN (INV_X1)                           0.04       0.91 r
+  M_A1/mult_14/U862/ZN (AOI21_X1)                         0.03       0.94 f
+  M_A1/mult_14/U896/ZN (OAI21_X1)                         0.06       1.00 r
+  M_A1/mult_14/U579/ZN (AOI21_X1)                         0.03       1.03 f
+  M_A1/mult_14/U883/ZN (OAI21_X1)                         0.05       1.08 r
+  M_A1/mult_14/U884/ZN (AOI21_X1)                         0.04       1.11 f
+  M_A1/mult_14/U885/ZN (INV_X1)                           0.05       1.16 r
+  M_A1/mult_14/U872/ZN (XNOR2_X1)                         0.08       1.24 r
+  M_A1/mult_14/product[12] (multiplier_2_DW_mult_tc_1)
+                                                          0.00       1.24 r
+  M_A1/P[12] (multiplier_2)                               0.00       1.24 r
+  A_fb/B[0] (adder_1)                                     0.00       1.24 r
+  A_fb/sub_15/B[0] (adder_1_DW01_sub_1)                   0.00       1.24 r
+  A_fb/sub_15/U158/ZN (INV_X1)                            0.03       1.27 f
+  A_fb/sub_15/U148/ZN (NOR2_X1)                           0.05       1.32 r
+  A_fb/sub_15/U177/ZN (OAI21_X1)                          0.04       1.37 f
+  A_fb/sub_15/U140/ZN (INV_X1)                            0.04       1.41 r
+  A_fb/sub_15/U185/ZN (OAI21_X1)                          0.03       1.44 f
+  A_fb/sub_15/U135/Z (XOR2_X1)                            0.07       1.51 f
+  A_fb/sub_15/DIFF[3] (adder_1_DW01_sub_1)                0.00       1.51 f
+  A_fb/U7/Z (MUX2_X2)                                     0.08       1.59 f
+  A_fb/S[3] (adder_1)                                     0.00       1.59 f
+  M_B0/B[3] (multiplier_0)                                0.00       1.59 f
+  M_B0/mult_14/b[3] (multiplier_0_DW_mult_tc_1)           0.00       1.59 f
+  M_B0/mult_14/U538/Z (CLKBUF_X1)                         0.05       1.64 f
+  M_B0/mult_14/U759/ZN (XNOR2_X1)                         0.07       1.70 f
+  M_B0/mult_14/U846/ZN (OAI22_X1)                         0.06       1.77 r
+  M_B0/mult_14/U235/CO (FA_X1)                            0.10       1.87 r
+  M_B0/mult_14/U562/ZN (XNOR2_X1)                         0.06       1.93 r
+  M_B0/mult_14/U561/ZN (XNOR2_X1)                         0.06       1.99 r
+  M_B0/mult_14/U720/ZN (NAND2_X1)                         0.04       2.04 f
+  M_B0/mult_14/U959/ZN (OAI21_X1)                         0.06       2.09 r
+  M_B0/mult_14/U481/ZN (AOI21_X1)                         0.03       2.12 f
+  M_B0/mult_14/U939/ZN (OAI21_X1)                         0.06       2.18 r
+  M_B0/mult_14/U933/ZN (AOI21_X1)                         0.04       2.22 f
+  M_B0/mult_14/U934/ZN (INV_X1)                           0.04       2.25 r
+  M_B0/mult_14/U938/ZN (AOI21_X1)                         0.03       2.29 f
+  M_B0/mult_14/U605/ZN (XNOR2_X1)                         0.06       2.35 f
+  M_B0/mult_14/product[13] (multiplier_0_DW_mult_tc_1)
+                                                          0.00       2.35 f
+  M_B0/P[13] (multiplier_0)                               0.00       2.35 f
+  A_ff/A[1] (adder_0)                                     0.00       2.35 f
+  A_ff/add_15/A[1] (adder_0_DW01_add_1)                   0.00       2.35 f
+  A_ff/add_15/U164/ZN (NOR2_X1)                           0.06       2.41 r
+  A_ff/add_15/U157/ZN (OAI21_X1)                          0.04       2.44 f
+  A_ff/add_15/U170/ZN (AOI21_X1)                          0.05       2.49 r
+  A_ff/add_15/U141/ZN (INV_X1)                            0.03       2.52 f
+  A_ff/add_15/U138/ZN (AOI21_X1)                          0.04       2.57 r
+  A_ff/add_15/U162/Z (XOR2_X1)                            0.06       2.63 r
+  A_ff/add_15/SUM[5] (adder_0_DW01_add_1)                 0.00       2.63 r
+  A_ff/U14/Z (MUX2_X1)                                    0.05       2.68 r
+  A_ff/S[5] (adder_0)                                     0.00       2.68 r
+  U46/ZN (INV_X1)                                         0.02       2.70 f
+  U45/ZN (OAI22_X1)                                       0.04       2.73 r
+  currDout_reg[5]/D (DFF_X1)                              0.01       2.74 r
+  data arrival time                                                  2.74
+
+  clock my_clk (rise edge)                                2.85       2.85
+  clock network delay (ideal)                             0.00       2.85
+  clock uncertainty                                      -0.07       2.78
+  currDout_reg[5]/CK (DFF_X1)                             0.00       2.78 r
+  library setup time                                     -0.04       2.74
+  data required time                                                 2.74
+  --------------------------------------------------------------------------
+  data required time                                                 2.74
+  data arrival time                                                 -2.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

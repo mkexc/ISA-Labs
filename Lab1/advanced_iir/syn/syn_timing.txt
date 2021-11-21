@@ -1,0 +1,72 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : myiir
+Version: O-2018.06-SP4
+Date   : Sat Nov 20 00:11:35 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: A1B1[7] (input port clocked by my_clk)
+  Endpoint: curr10_reg[9]
+            (rising edge-triggered flip-flop clocked by my_clk)
+  Path Group: my_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  myiir              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock my_clk (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  A1B1[7] (in)                                            0.00       0.50 f
+  M_A1B1/B[4] (multiplier_2)                              0.00       0.50 f
+  M_A1B1/mult_14/b[4] (multiplier_2_DW_mult_tc_1)         0.00       0.50 f
+  M_A1B1/mult_14/U742/ZN (XNOR2_X1)                       0.06       0.56 f
+  M_A1B1/mult_14/U662/ZN (OAI22_X1)                       0.07       0.63 r
+  M_A1B1/mult_14/U187/S (FA_X1)                           0.13       0.75 f
+  M_A1B1/mult_14/U185/S (FA_X1)                           0.13       0.89 r
+  M_A1B1/mult_14/U184/S (FA_X1)                           0.11       1.00 f
+  M_A1B1/mult_14/U456/ZN (NAND2_X1)                       0.04       1.04 r
+  M_A1B1/mult_14/U712/ZN (OAI21_X1)                       0.03       1.07 f
+  M_A1B1/mult_14/U706/ZN (AOI21_X1)                       0.05       1.13 r
+  M_A1B1/mult_14/U717/ZN (OAI21_X1)                       0.03       1.16 f
+  M_A1B1/mult_14/U700/ZN (AOI21_X1)                       0.04       1.20 r
+  M_A1B1/mult_14/U699/ZN (OAI21_X1)                       0.03       1.23 f
+  M_A1B1/mult_14/U469/ZN (AOI21_X1)                       0.04       1.27 r
+  M_A1B1/mult_14/U797/ZN (OAI21_X1)                       0.03       1.31 f
+  M_A1B1/mult_14/U796/ZN (AOI21_X1)                       0.04       1.35 r
+  M_A1B1/mult_14/U792/ZN (INV_X1)                         0.02       1.37 f
+  M_A1B1/mult_14/U5/CO (FA_X1)                            0.09       1.46 f
+  M_A1B1/mult_14/U634/ZN (XNOR2_X1)                       0.06       1.52 f
+  M_A1B1/mult_14/product[21] (multiplier_2_DW_mult_tc_1)
+                                                          0.00       1.52 f
+  M_A1B1/P[21] (multiplier_2)                             0.00       1.52 f
+  U488/ZN (AOI22_X1)                                      0.06       1.57 r
+  U489/ZN (INV_X1)                                        0.02       1.59 f
+  curr10_reg[9]/D (DFF_X1)                                0.01       1.60 f
+  data arrival time                                                  1.60
+
+  clock my_clk (rise edge)                                1.71       1.71
+  clock network delay (ideal)                             0.00       1.71
+  clock uncertainty                                      -0.07       1.64
+  curr10_reg[9]/CK (DFF_X1)                               0.00       1.64 r
+  library setup time                                     -0.04       1.60
+  data required time                                                 1.60
+  --------------------------------------------------------------------------
+  data required time                                                 1.60
+  data arrival time                                                 -1.60
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
