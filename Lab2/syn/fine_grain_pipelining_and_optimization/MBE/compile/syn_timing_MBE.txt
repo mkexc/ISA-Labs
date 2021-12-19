@@ -1,0 +1,122 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FPmul
+Version: M-2016.12
+Date   : Tue Dec 14 17:09:35 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: I1/B_SIG_reg[1]
+              (rising edge-triggered flip-flop clocked by my_clk)
+  Endpoint: I2/SIG_in_reg[27]
+            (rising edge-triggered flip-flop clocked by my_clk)
+  Path Group: my_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FPmul              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock my_clk (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  I1/B_SIG_reg[1]/CK (DFF_X1)                             0.00       0.00 r
+  I1/B_SIG_reg[1]/Q (DFF_X1)                              0.09       0.09 r
+  U5641/ZN (NAND2_X1)                                     0.03       0.13 f
+  U3878/ZN (AND2_X1)                                      0.04       0.17 f
+  U3870/ZN (INV_X1)                                       0.03       0.20 r
+  U3834/ZN (XNOR2_X1)                                     0.06       0.27 r
+  U6029/ZN (OAI22_X1)                                     0.04       0.31 f
+  U4758/ZN (XNOR2_X1)                                     0.06       0.37 f
+  U3958/ZN (XNOR2_X1)                                     0.07       0.44 f
+  U3920/ZN (XNOR2_X1)                                     0.06       0.50 f
+  U3914/ZN (XNOR2_X1)                                     0.06       0.56 f
+  U3913/ZN (XNOR2_X1)                                     0.06       0.62 f
+  add_1_root_I2/mult/addr/add_26_2/B[6] (FPmul_DW01_add_4)
+                                                          0.00       0.62 f
+  add_1_root_I2/mult/addr/add_26_2/U385/ZN (NOR2_X1)      0.04       0.66 r
+  add_1_root_I2/mult/addr/add_26_2/U386/ZN (OAI21_X1)     0.03       0.69 f
+  add_1_root_I2/mult/addr/add_26_2/U415/ZN (AOI21_X1)     0.04       0.73 r
+  add_1_root_I2/mult/addr/add_26_2/U428/ZN (OAI21_X1)     0.03       0.76 f
+  add_1_root_I2/mult/addr/add_26_2/U427/ZN (AOI21_X1)     0.04       0.80 r
+  add_1_root_I2/mult/addr/add_26_2/U429/ZN (OAI21_X1)     0.03       0.83 f
+  add_1_root_I2/mult/addr/add_26_2/U418/ZN (AOI21_X1)     0.04       0.87 r
+  add_1_root_I2/mult/addr/add_26_2/U424/ZN (OAI21_X1)     0.03       0.90 f
+  add_1_root_I2/mult/addr/add_26_2/U419/ZN (AOI21_X1)     0.04       0.93 r
+  add_1_root_I2/mult/addr/add_26_2/U423/ZN (OAI21_X1)     0.03       0.96 f
+  add_1_root_I2/mult/addr/add_26_2/U412/ZN (AOI21_X1)     0.04       1.00 r
+  add_1_root_I2/mult/addr/add_26_2/U416/ZN (OAI21_X1)     0.03       1.03 f
+  add_1_root_I2/mult/addr/add_26_2/U404/ZN (AOI21_X1)     0.04       1.07 r
+  add_1_root_I2/mult/addr/add_26_2/U411/ZN (OAI21_X1)     0.03       1.10 f
+  add_1_root_I2/mult/addr/add_26_2/U409/ZN (AOI21_X1)     0.04       1.14 r
+  add_1_root_I2/mult/addr/add_26_2/U431/ZN (OAI21_X1)     0.03       1.17 f
+  add_1_root_I2/mult/addr/add_26_2/U315/ZN (AOI21_X1)     0.04       1.21 r
+  add_1_root_I2/mult/addr/add_26_2/U426/ZN (OAI21_X1)     0.03       1.25 f
+  add_1_root_I2/mult/addr/add_26_2/U319/ZN (AOI21_X1)     0.04       1.29 r
+  add_1_root_I2/mult/addr/add_26_2/U403/ZN (OAI21_X1)     0.03       1.32 f
+  add_1_root_I2/mult/addr/add_26_2/U316/ZN (AOI21_X1)     0.04       1.36 r
+  add_1_root_I2/mult/addr/add_26_2/U402/ZN (OAI21_X1)     0.03       1.40 f
+  add_1_root_I2/mult/addr/add_26_2/U400/ZN (AOI21_X1)     0.04       1.44 r
+  add_1_root_I2/mult/addr/add_26_2/U417/ZN (OAI21_X1)     0.03       1.47 f
+  add_1_root_I2/mult/addr/add_26_2/U320/ZN (AOI21_X1)     0.04       1.51 r
+  add_1_root_I2/mult/addr/add_26_2/U425/ZN (OAI21_X1)     0.04       1.55 f
+  add_1_root_I2/mult/addr/add_26_2/U237/ZN (NAND2_X1)     0.04       1.59 r
+  add_1_root_I2/mult/addr/add_26_2/U239/ZN (NAND3_X1)     0.05       1.63 f
+  add_1_root_I2/mult/addr/add_26_2/U169/ZN (NAND2_X1)     0.04       1.67 r
+  add_1_root_I2/mult/addr/add_26_2/U216/ZN (NAND3_X1)     0.03       1.70 f
+  add_1_root_I2/mult/addr/add_26_2/U220/ZN (NAND2_X1)     0.03       1.74 r
+  add_1_root_I2/mult/addr/add_26_2/U223/ZN (NAND3_X1)     0.04       1.77 f
+  add_1_root_I2/mult/addr/add_26_2/U271/ZN (NAND2_X1)     0.04       1.81 r
+  add_1_root_I2/mult/addr/add_26_2/U273/ZN (NAND3_X1)     0.04       1.84 f
+  add_1_root_I2/mult/addr/add_26_2/U293/ZN (NAND2_X1)     0.04       1.88 r
+  add_1_root_I2/mult/addr/add_26_2/U191/ZN (NAND3_X1)     0.04       1.92 f
+  add_1_root_I2/mult/addr/add_26_2/U205/ZN (NAND2_X1)     0.04       1.95 r
+  add_1_root_I2/mult/addr/add_26_2/U192/ZN (NAND3_X1)     0.04       1.99 f
+  add_1_root_I2/mult/addr/add_26_2/U257/ZN (NAND2_X1)     0.04       2.02 r
+  add_1_root_I2/mult/addr/add_26_2/U200/ZN (NAND3_X1)     0.04       2.06 f
+  add_1_root_I2/mult/addr/add_26_2/U229/ZN (NAND2_X1)     0.04       2.10 r
+  add_1_root_I2/mult/addr/add_26_2/U190/ZN (NAND3_X1)     0.04       2.13 f
+  add_1_root_I2/mult/addr/add_26_2/U251/ZN (NAND2_X1)     0.04       2.17 r
+  add_1_root_I2/mult/addr/add_26_2/U211/ZN (NAND3_X1)     0.04       2.21 f
+  add_1_root_I2/mult/addr/add_26_2/U264/ZN (NAND2_X1)     0.04       2.24 r
+  add_1_root_I2/mult/addr/add_26_2/U267/ZN (NAND3_X1)     0.04       2.28 f
+  add_1_root_I2/mult/addr/add_26_2/U299/ZN (NAND2_X1)     0.04       2.32 r
+  add_1_root_I2/mult/addr/add_26_2/U301/ZN (NAND3_X1)     0.04       2.35 f
+  add_1_root_I2/mult/addr/add_26_2/U305/ZN (NAND2_X1)     0.03       2.39 r
+  add_1_root_I2/mult/addr/add_26_2/U279/ZN (NAND3_X1)     0.04       2.42 f
+  add_1_root_I2/mult/addr/add_26_2/U311/ZN (NAND2_X1)     0.04       2.46 r
+  add_1_root_I2/mult/addr/add_26_2/U275/ZN (NAND3_X1)     0.04       2.50 f
+  add_1_root_I2/mult/addr/add_26_2/U391/ZN (NAND2_X1)     0.04       2.54 r
+  add_1_root_I2/mult/addr/add_26_2/U276/ZN (NAND3_X1)     0.04       2.58 f
+  add_1_root_I2/mult/addr/add_26_2/U184/ZN (NAND2_X1)     0.03       2.61 r
+  add_1_root_I2/mult/addr/add_26_2/U187/ZN (NAND3_X1)     0.04       2.65 f
+  add_1_root_I2/mult/addr/add_26_2/U287/ZN (NAND2_X1)     0.03       2.68 r
+  add_1_root_I2/mult/addr/add_26_2/U289/ZN (NAND3_X1)     0.03       2.71 f
+  add_1_root_I2/mult/addr/add_26_2/U361/ZN (XNOR2_X1)     0.05       2.76 f
+  add_1_root_I2/mult/addr/add_26_2/SUM[47] (FPmul_DW01_add_4)
+                                                          0.00       2.76 f
+  I2/SIG_in_reg[27]/D (DFFRS_X1)                          0.01       2.77 f
+  data arrival time                                                  2.77
+
+  clock my_clk (rise edge)                                2.88       2.88
+  clock network delay (ideal)                             0.00       2.88
+  clock uncertainty                                      -0.07       2.81
+  I2/SIG_in_reg[27]/CK (DFFRS_X1)                         0.00       2.81 r
+  library setup time                                     -0.04       2.77
+  data required time                                                 2.77
+  --------------------------------------------------------------------------
+  data required time                                                 2.77
+  data arrival time                                                 -2.77
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
