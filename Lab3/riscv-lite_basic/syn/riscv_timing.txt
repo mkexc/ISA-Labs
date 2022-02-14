@@ -1,0 +1,141 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RISCV' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RISCV
+Version: O-2018.06-SP4
+Date   : Sun Feb 13 02:23:00 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: DP_u/MEM_U/currRD_reg[2]
+              (rising edge-triggered flip-flop clocked by my_clk)
+  Endpoint: DP_u/MEM_U/currALU_reg[31]
+            (rising edge-triggered flip-flop clocked by my_clk)
+  Path Group: my_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock my_clk (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_u/MEM_U/currRD_reg[2]/CK (DFF_X1)                    0.00 #     0.00 r
+  DP_u/MEM_U/currRD_reg[2]/Q (DFF_X1)                     0.09       0.09 f
+  DP_u/MEM_U/RD_OUT[2] (mem_unit)                         0.00       0.09 f
+  DP_u/RD_EXE_MEM[2] (DP)                                 0.00       0.09 f
+  CU_u/RD_EXE_MEM[2] (CU)                                 0.00       0.09 f
+  CU_u/forward_unit_exe/RD_EX_MEM[2] (FWD_EXE)            0.00       0.09 f
+  CU_u/forward_unit_exe/U41/Z (XOR2_X1)                   0.07       0.16 f
+  CU_u/forward_unit_exe/U52/ZN (NOR4_X1)                  0.09       0.25 r
+  CU_u/forward_unit_exe/U22/ZN (NAND3_X1)                 0.05       0.30 f
+  CU_u/forward_unit_exe/U49/ZN (OAI21_X1)                 0.04       0.34 r
+  CU_u/forward_unit_exe/U56/ZN (INV_X1)                   0.03       0.37 f
+  CU_u/forward_unit_exe/MUX_OPB_SEL[2] (FWD_EXE)          0.00       0.37 f
+  CU_u/ALU_OPB_SEL[2] (CU)                                0.00       0.37 f
+  DP_u/ALU_OPB_SEL[2] (DP)                                0.00       0.37 f
+  DP_u/EXE_U/ALU_OPB_SEL[2] (exe_unit)                    0.00       0.37 f
+  DP_u/EXE_U/U511/ZN (NOR3_X1)                            0.08       0.45 r
+  DP_u/EXE_U/U63/ZN (OR3_X1)                              0.05       0.50 r
+  DP_u/EXE_U/U560/ZN (OAI221_X1)                          0.05       0.55 f
+  DP_u/EXE_U/alu_i/ALU_OPB[0] (alu_N32)                   0.00       0.55 f
+  DP_u/EXE_U/alu_i/add_53/B[0] (alu_N32_DW01_add_0)       0.00       0.55 f
+  DP_u/EXE_U/alu_i/add_53/U265/ZN (AND2_X1)               0.05       0.60 f
+  DP_u/EXE_U/alu_i/add_53/U235/ZN (NAND2_X1)              0.03       0.63 r
+  DP_u/EXE_U/alu_i/add_53/U236/ZN (NAND3_X1)              0.04       0.67 f
+  DP_u/EXE_U/alu_i/add_53/U240/ZN (NAND2_X1)              0.03       0.70 r
+  DP_u/EXE_U/alu_i/add_53/U204/ZN (NAND3_X1)              0.05       0.75 f
+  DP_u/EXE_U/alu_i/add_53/U12/ZN (NAND2_X1)               0.04       0.78 r
+  DP_u/EXE_U/alu_i/add_53/U35/ZN (NAND3_X1)               0.03       0.82 f
+  DP_u/EXE_U/alu_i/add_53/U163/ZN (NAND2_X1)              0.03       0.85 r
+  DP_u/EXE_U/alu_i/add_53/U165/ZN (NAND3_X1)              0.04       0.88 f
+  DP_u/EXE_U/alu_i/add_53/U177/ZN (NAND2_X1)              0.04       0.92 r
+  DP_u/EXE_U/alu_i/add_53/U179/ZN (NAND3_X1)              0.04       0.96 f
+  DP_u/EXE_U/alu_i/add_53/U189/ZN (NAND2_X1)              0.04       0.99 r
+  DP_u/EXE_U/alu_i/add_53/U55/ZN (NAND3_X1)               0.04       1.03 f
+  DP_u/EXE_U/alu_i/add_53/U201/ZN (NAND2_X1)              0.04       1.07 r
+  DP_u/EXE_U/alu_i/add_53/U56/ZN (NAND3_X1)               0.04       1.11 f
+  DP_u/EXE_U/alu_i/add_53/U5/ZN (NAND2_X1)                0.04       1.15 r
+  DP_u/EXE_U/alu_i/add_53/U23/ZN (NAND3_X1)               0.04       1.19 f
+  DP_u/EXE_U/alu_i/add_53/U129/ZN (NAND2_X1)              0.03       1.22 r
+  DP_u/EXE_U/alu_i/add_53/U67/ZN (NAND3_X1)               0.04       1.26 f
+  DP_u/EXE_U/alu_i/add_53/U261/ZN (NAND2_X1)              0.04       1.29 r
+  DP_u/EXE_U/alu_i/add_53/U264/ZN (NAND3_X1)              0.04       1.33 f
+  DP_u/EXE_U/alu_i/add_53/U111/ZN (NAND2_X1)              0.03       1.37 r
+  DP_u/EXE_U/alu_i/add_53/U52/ZN (NAND3_X1)               0.04       1.41 f
+  DP_u/EXE_U/alu_i/add_53/U256/ZN (NAND2_X1)              0.04       1.44 r
+  DP_u/EXE_U/alu_i/add_53/U258/ZN (NAND3_X1)              0.04       1.48 f
+  DP_u/EXE_U/alu_i/add_53/U93/ZN (NAND2_X1)               0.04       1.52 r
+  DP_u/EXE_U/alu_i/add_53/U54/ZN (NAND3_X1)               0.04       1.56 f
+  DP_u/EXE_U/alu_i/add_53/U221/ZN (NAND2_X1)              0.03       1.59 r
+  DP_u/EXE_U/alu_i/add_53/U58/ZN (NAND3_X1)               0.05       1.64 f
+  DP_u/EXE_U/alu_i/add_53/U6/ZN (NAND2_X1)                0.04       1.67 r
+  DP_u/EXE_U/alu_i/add_53/U8/ZN (NAND3_X1)                0.03       1.71 f
+  DP_u/EXE_U/alu_i/add_53/U71/ZN (NAND2_X1)               0.03       1.74 r
+  DP_u/EXE_U/alu_i/add_53/U73/ZN (NAND3_X1)               0.04       1.78 f
+  DP_u/EXE_U/alu_i/add_53/U144/ZN (NAND2_X1)              0.04       1.81 r
+  DP_u/EXE_U/alu_i/add_53/U50/ZN (NAND3_X1)               0.04       1.85 f
+  DP_u/EXE_U/alu_i/add_53/U151/ZN (NAND2_X1)              0.04       1.89 r
+  DP_u/EXE_U/alu_i/add_53/U153/ZN (NAND3_X1)              0.04       1.92 f
+  DP_u/EXE_U/alu_i/add_53/U99/ZN (NAND2_X1)               0.04       1.96 r
+  DP_u/EXE_U/alu_i/add_53/U101/ZN (NAND3_X1)              0.04       2.00 f
+  DP_u/EXE_U/alu_i/add_53/U171/ZN (NAND2_X1)              0.04       2.03 r
+  DP_u/EXE_U/alu_i/add_53/U166/ZN (NAND3_X1)              0.04       2.08 f
+  DP_u/EXE_U/alu_i/add_53/U11/ZN (NAND2_X1)               0.04       2.12 r
+  DP_u/EXE_U/alu_i/add_53/U59/ZN (NAND3_X1)               0.03       2.15 f
+  DP_u/EXE_U/alu_i/add_53/U194/ZN (NAND2_X1)              0.03       2.18 r
+  DP_u/EXE_U/alu_i/add_53/U114/ZN (NAND3_X1)              0.04       2.22 f
+  DP_u/EXE_U/alu_i/add_53/U210/ZN (NAND2_X1)              0.04       2.26 r
+  DP_u/EXE_U/alu_i/add_53/U205/ZN (NAND3_X1)              0.04       2.30 f
+  DP_u/EXE_U/alu_i/add_53/U214/ZN (NAND2_X1)              0.03       2.33 r
+  DP_u/EXE_U/alu_i/add_53/U74/ZN (NAND3_X1)               0.04       2.37 f
+  DP_u/EXE_U/alu_i/add_53/U77/ZN (NAND2_X1)               0.04       2.41 r
+  DP_u/EXE_U/alu_i/add_53/U51/ZN (NAND3_X1)               0.04       2.44 f
+  DP_u/EXE_U/alu_i/add_53/U123/ZN (NAND2_X1)              0.04       2.48 r
+  DP_u/EXE_U/alu_i/add_53/U126/ZN (NAND3_X1)              0.04       2.51 f
+  DP_u/EXE_U/alu_i/add_53/U229/ZN (NAND2_X1)              0.04       2.55 r
+  DP_u/EXE_U/alu_i/add_53/U231/ZN (NAND3_X1)              0.04       2.59 f
+  DP_u/EXE_U/alu_i/add_53/U250/ZN (NAND2_X1)              0.04       2.62 r
+  DP_u/EXE_U/alu_i/add_53/U252/ZN (NAND3_X1)              0.04       2.67 f
+  DP_u/EXE_U/alu_i/add_53/U105/ZN (NAND2_X1)              0.04       2.71 r
+  DP_u/EXE_U/alu_i/add_53/U107/ZN (NAND3_X1)              0.04       2.75 f
+  DP_u/EXE_U/alu_i/add_53/U136/ZN (NAND2_X1)              0.03       2.77 r
+  DP_u/EXE_U/alu_i/add_53/U82/ZN (AND3_X1)                0.05       2.83 r
+  DP_u/EXE_U/alu_i/add_53/U83/ZN (XNOR2_X1)               0.03       2.86 f
+  DP_u/EXE_U/alu_i/add_53/SUM[31] (alu_N32_DW01_add_0)
+                                                          0.00       2.86 f
+  DP_u/EXE_U/alu_i/U280/ZN (AOI21_X1)                     0.04       2.90 r
+  DP_u/EXE_U/alu_i/U276/ZN (NAND2_X1)                     0.03       2.93 f
+  DP_u/EXE_U/alu_i/ALU_OUT[31] (alu_N32)                  0.00       2.93 f
+  DP_u/EXE_U/ALU_OUT[31] (exe_unit)                       0.00       2.93 f
+  DP_u/MEM_U/ALU_OUT_IN[31] (mem_unit)                    0.00       2.93 f
+  DP_u/MEM_U/U156/ZN (AOI22_X1)                           0.04       2.97 r
+  DP_u/MEM_U/U157/ZN (INV_X1)                             0.02       2.99 f
+  DP_u/MEM_U/currALU_reg[31]/D (DFF_X1)                   0.01       3.00 f
+  data arrival time                                                  3.00
+
+  clock my_clk (rise edge)                                3.11       3.11
+  clock network delay (ideal)                             0.00       3.11
+  clock uncertainty                                      -0.07       3.04
+  DP_u/MEM_U/currALU_reg[31]/CK (DFF_X1)                  0.00       3.04 r
+  library setup time                                     -0.04       3.00
+  data required time                                                 3.00
+  --------------------------------------------------------------------------
+  data required time                                                 3.00
+  data arrival time                                                 -3.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

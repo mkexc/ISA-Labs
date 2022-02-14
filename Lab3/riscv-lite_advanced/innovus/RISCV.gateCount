@@ -1,0 +1,15 @@
+Gate area 0.7980 um^2
+Level 0 Module RISCV                                    Gates=     17193 Cells=    8024 Area=   13720.3 um^2
+Level 1 Module DP_u                                     Gates=16771      Cells=7796     Area=   13383.3 um^2
+Level 2 Module DP_u/FETCH_U                             Gates=393        Cells=164      Area=     314.1 um^2
+Level 2 Module DP_u/DECODE_U                            Gates=12123      Cells=5394     Area=    9674.4 um^2
+Level 3 Module DP_u/DECODE_U/rf                         Gates=10974      Cells=4766     Area=    8757.8 um^2
+Level 3 Module DP_u/DECODE_U/add_125                    Gates=231        Cells=132      Area=     184.3 um^2
+Level 2 Module DP_u/EXE_U                               Gates=3055       Cells=1742     Area=    2438.2 um^2
+Level 3 Module DP_u/EXE_U/alu_i                         Gates=1284       Cells=898      Area=    1025.2 um^2
+Level 4 Module DP_u/EXE_U/alu_i/add_53                  Gates=267        Cells=192      Area=     213.6 um^2
+Level 4 Module DP_u/EXE_U/alu_i/lt_47                   Gates=126        Cells=113      Area=     100.8 um^2
+Level 3 Module DP_u/EXE_U/abs_i                         Gates=165        Cells=93       Area=     131.9 um^2
+Level 2 Module DP_u/MEM_U                               Gates=561        Cells=214      Area=     447.9 um^2
+Level 2 Module DP_u/WB_U                                Gates=637        Cells=282      Area=     508.6 um^2
+Level 1 Module CU_u                                     Gates=422        Cells=228      Area=     337.0 um^2
