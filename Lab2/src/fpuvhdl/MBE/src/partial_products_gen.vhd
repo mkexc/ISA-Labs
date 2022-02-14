@@ -24,7 +24,7 @@ architecture rtl of partial_products_gen is
         );
     end component booth_gen;
 
-    type mat_type is array (N/2+1 downto 0) of std_logic_vector(2*N-1 downto 0);
+    type mat_type is array (N/2 downto 0) of std_logic_vector(2*N-1 downto 0);
     signal out_int : std_logic_vector((N/2+1)*N*2-1 downto 0);
     signal mat : mat_type;
     signal A_2, A_pad : std_logic_vector(N downto 0);
