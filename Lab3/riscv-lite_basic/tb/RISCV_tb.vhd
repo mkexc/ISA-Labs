@@ -55,12 +55,12 @@ architecture test of RISCV_tb is
     -- signal to connect the memories
     signal IRAM_ADDR_m, IRAM_OUT_m: std_logic_vector(31 downto 0);
     signal DRAM_OUT_m, DRAM_IN_m, DRAM_ADDR_m: std_logic_vector(31 downto 0);
-    signal DRAM_WR_m, DRAM_RD_m, DRAM_EN_m: std_logic;
+    signal DRAM_WR_m, DRAM_RD_m, DRAM_EN_m, DRAM_EN_REAL: std_logic;
     signal DRAM_ADDR_REAL : std_logic_vector(31 downto 0);
-    signal IRAM_ADDR_REAL : std_logic_vector(31 downto 0);
+    constant OFFSET : unsigned(31 downto 0) := x"0FC10000";
     
 begin
-
+    
     -- clock process
     clk_process: process
     begin
@@ -101,7 +101,7 @@ begin
     iram_i : IRAM
     port map(
         rst     => rst_sim,
-        addr    => IRAM_ADDR_REAL,
+        addr    => IRAM_ADDR_m,
         Dout    => IRAM_OUT_m
     );
 
@@ -114,7 +114,7 @@ begin
     port map(
         clk     => clk_sim,
         rst     => rst_sim,
-        en      => DRAM_EN_m,
+        en      => DRAM_EN_REAL,
         RD      => DRAM_RD_m,
         WR      => DRAM_WR_m,
         addr    => DRAM_ADDR_REAL,
@@ -122,6 +122,7 @@ begin
         Dout    => DRAM_OUT_m
     );
 
-    DRAM_ADDR_REAL <= (15 downto 0 => '0')&DRAM_ADDR_m(15 downto 0);
-    IRAM_ADDR_REAL <= (15 downto 0 => '0')&IRAM_ADDR_m(15 downto 0);
+    DRAM_EN_REAL <= DRAM_EN_m after 1 ns; -- to give delta cycles time to the simulator to first compute real address and then access memory
+    DRAM_ADDR_REAL <= std_logic_vector(unsigned(DRAM_ADDR_m)-OFFSET);
+
 end architecture test;

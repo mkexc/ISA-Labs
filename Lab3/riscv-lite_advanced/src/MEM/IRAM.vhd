@@ -26,10 +26,10 @@ architecture beh of IRAM is
 begin  
   
     --OUT PROCESS
-    Dout(I_SIZE-1 downto I_SIZE-8) 		<= IRAM_mem(to_integer(unsigned(addr)));  --Most significant byte
-    Dout(I_SIZE-9 downto I_SIZE-16) 	<= IRAM_mem(to_integer(unsigned(addr))+1);
-    Dout(I_SIZE-17 downto I_SIZE-24) 	<= IRAM_mem(to_integer(unsigned(addr))+2);
-    Dout(I_SIZE-25 downto 0) 			<= IRAM_mem(to_integer(unsigned(addr))+3);--Least significant byte
+    Dout(I_SIZE-1 downto I_SIZE-8) 		<= IRAM_mem(to_integer(unsigned(addr))+3);  --Most significant byte
+    Dout(I_SIZE-9 downto I_SIZE-16) 	<= IRAM_mem(to_integer(unsigned(addr))+2);
+    Dout(I_SIZE-17 downto I_SIZE-24) 	<= IRAM_mem(to_integer(unsigned(addr))+1);
+    Dout(I_SIZE-25 downto 0) 			<= IRAM_mem(to_integer(unsigned(addr)));--Least significant byte
   
     --FILL PROCESS
     FILL_MEM: process (rst)
@@ -43,10 +43,10 @@ begin
             while (not endfile(mem_fp)) loop
                 readline(mem_fp,file_line);
                 hread(file_line,tmp_data_u);
-                IRAM_mem(index)   <= tmp_data_u(I_SIZE-1 downto I_SIZE-8);   --Most significant byte
-                IRAM_mem(index+1) <= tmp_data_u(I_SIZE-9 downto I_SIZE-16);  
-                IRAM_mem(index+2) <= tmp_data_u(I_SIZE-17 downto I_SIZE-24); --Least significant byte 
-                IRAM_mem(index+3) <= tmp_data_u(I_SIZE-25 downto 0);  
+                IRAM_mem(index+3)   <= tmp_data_u(I_SIZE-1 downto I_SIZE-8);   
+                IRAM_mem(index+2) <= tmp_data_u(I_SIZE-9 downto I_SIZE-16);  
+                IRAM_mem(index+1) <= tmp_data_u(I_SIZE-17 downto I_SIZE-24);  
+                IRAM_mem(index) <= tmp_data_u(I_SIZE-25 downto 0);  
                 index := index + 4;		-- because next PC = PC + 4
             end loop;
                 file_close(mem_fp);
