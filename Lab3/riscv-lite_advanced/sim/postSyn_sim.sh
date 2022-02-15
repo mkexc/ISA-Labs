@@ -1,5 +1,6 @@
 source /software/scripts/init_msim6.2g
 
+rm -rf work
 vlib work
 
 vcom ../src/constants.vhd
